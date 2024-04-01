@@ -46,6 +46,9 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      biome = {
+        single_file_support = true,
+      },
     },
     -- customize how language servers are attached
     handlers = {

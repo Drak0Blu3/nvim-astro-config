@@ -32,11 +32,7 @@ return {
         "stylua",
         "biome",
         -- add more arguments for adding more null-ls sources
-      }),
-      require("lspconfig").biome.setup {
-        single_file_support = true,
-        settings = {},
-      }
+      })
     end,
   },
   {
