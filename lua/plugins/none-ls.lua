@@ -17,6 +17,7 @@ return {
       -- null_ls.builtins.formatting.stylua,
       null_ls.builtins.formatting.prettierd.with {
         filetypes = { "yaml", "markdown", "html" },
+        disabled_filetypes = { "lua", "json", "javascript" },
       },
     }
     return config -- return final config table
