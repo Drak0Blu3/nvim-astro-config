@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize None-ls sources
 
@@ -17,7 +17,7 @@ return {
       -- null_ls.builtins.formatting.stylua,
       null_ls.builtins.formatting.prettierd.with {
         filetypes = { "yaml", "markdown", "html" },
-        disabled_filetypes = { "lua", "json", "javascript" },
+        -- disabled_filetypes = { "lua", "json", "javascript" },
       },
     }
     return config -- return final config table
