@@ -33,6 +33,19 @@ return {
         "biome",
         -- add more arguments for adding more null-ls sources
       })
+      opts.handlers = {
+        prettierd = function()
+          require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with {
+            filetypes = { "yaml", "markdown", "html" },
+            condition = function(utils)
+              return utils.root_has_file "package.json"
+                or utils.root_has_file ".prettierrc"
+                or utils.root_has_file ".prettierrc.json"
+                or utils.root_has_file ".prettierrc.js"
+            end,
+          })
+        end,
+      }
     end,
   },
   {
